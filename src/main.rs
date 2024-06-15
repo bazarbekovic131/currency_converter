@@ -1,3 +1,5 @@
+// mod interface;
+
 use std::collections::HashMap;
 use std::io::{self, Write};
 
@@ -39,10 +41,10 @@ fn init_currencies() -> HashMap<String, &'static Currency> {
     static POUND: Currency = Currency::new("British Pound", 1.27, "GBP", "£");
     static RUBLE: Currency = Currency::new("Ruble", 0.01, "RUB", "₽");
 
-    let currencies = vec![&USD, &TENGE, &EURO, &YEN, &POUND, &RUBLE];
+    let currencies = [&USD, &TENGE, &EURO, &YEN, &POUND, &RUBLE];
     let mut currency_map = HashMap::new();
 
-    for &currency in &currencies {
+    for currency in currencies {
         currency_map.insert(currency.code.to_lowercase(), currency);
         currency_map.insert(currency.name.to_lowercase(), currency);
         currency_map.insert(currency.symbol.to_lowercase(), currency);
