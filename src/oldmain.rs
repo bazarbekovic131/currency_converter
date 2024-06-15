@@ -63,7 +63,7 @@ fn init_currencies() -> Vec<Currency> {
     let euro = Currency::new("Euro", 1.07, "EUR", "€");
     let yen = Currency::new("Japanese Yen", 0.0064, "JPY", "¥");
     let pound = Currency::new("British Pound", 1.27, "GBP", "£");
-    let ruble = Currency::new("Ruble", 0.01,"RUB","R" );
+    let ruble = Currency::new("Ruble", 0.01,"RUB","₽" );
     vec![usd, tenge, euro, yen, pound, ruble]
 }
 
